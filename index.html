@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>KuotaKit — Subscriptions without commission</title>
+  <meta name="description" content="A self-hosted, open-source in-app purchases & subscriptions SDK for Android, iOS, React Native and Flutter. Run your own billing backend and keep every sale." />
+  <link rel="canonical" href="https://kuotakit.pedrorau.dev/" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="KuotaKit — Subscriptions without commission" />
+  <meta property="og:description" content="Open-source, self-hosted IAP & subscriptions SDK for Android, iOS, React Native and Flutter." />
+  <meta property="og:url" content="https://kuotakit.pedrorau.dev/" />
+  <meta property="og:image" content="https://kuotakit.pedrorau.dev/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KuotaKit — Subscriptions without commission" />
+  <meta name="twitter:description" content="Open-source, self-hosted IAP & subscriptions SDK for Android, iOS, React Native and Flutter." />
+  <meta name="twitter:image" content="https://kuotakit.pedrorau.dev/og.png" />
+
+  <!-- Favicon (inline SVG — no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230A0A0A'/><rect x='9' y='9' width='14' height='14' fill='%23E5FF00'/></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand"><span class="sq" aria-hidden="true"></span> KuotaKit</a>
+      <div class="nav-links">
+        <a href="docs/index.html" style="padding: 0 10px; font-weight: 500;">Docs</a>
+        <a href="https://github.com/pedrorau/kuotakit" class="btn btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 9.8l6.5-.9z"/></svg>
+          Star
+        </a>
+        <a href="docs/index.html" class="btn btn-primary">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-col">
+        <div class="eyebrow">[ Open source / Apache-2.0 ]</div>
+        <h1>Subscriptions, without the <span class="hl">commission.</span></h1>
+        <p class="hero-sub muted">A self-hosted in-app purchases &amp; subscriptions SDK for Android, iOS, React Native and Flutter. Run your own billing backend and keep every sale.</p>
+        <div class="hero-actions">
+          <a href="docs/index.html" class="btn btn-primary">Get started →</a>
+          <a href="https://github.com/pedrorau/kuotakit" class="btn btn-ghost">View on GitHub</a>
+        </div>
+        <p class="hero-meta mono muted">Kotlin-first · KMP core · Postgres backend</p>
+      </div>
+      <div class="hero-col">
+        <div class="code">
+          <div class="code-head"><span class="dot" style="background: var(--acc);" aria-hidden="true"></span><span class="dot" style="background: #3A3A3A;" aria-hidden="true"></span>build.gradle.kts</div>
+          <div class="code-body">
+<pre>dependencies {
+  implementation(<span class="str">"dev.pedrorau.kuotakit:android:0.1.0"</span>)
+}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PLATFORMS -->
+  <section class="wrap platforms">
+    <div class="plat-label">ONE CORE / EVERY PLATFORM</div>
+    <div class="plat-bar">
+      <span>Android</span><span>iOS</span><span>React Native</span><span>Flutter</span><span>Ktor backend</span>
+    </div>
+  </section>
+
+  <!-- QUICK START -->
+  <section class="wrap section">
+    <div class="eyebrow">// Quick start</div>
+    <h2>Up and running in minutes</h2>
+    <div class="steps">
+      <div class="step">
+        <p class="steplabel"><span class="idx">01</span><span>Add the dependency</span></p>
+        <div class="code">
+          <div class="code-head"><span class="dot" style="background: var(--acc);" aria-hidden="true"></span><span class="dot" style="background: #3A3A3A;" aria-hidden="true"></span>build.gradle.kts</div>
+          <div class="code-body">
+<pre>dependencies {
+  implementation(<span class="str">"dev.pedrorau.kuotakit:android:0.1.0"</span>)
+}</pre>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <p class="steplabel"><span class="idx">02</span><span>Check an entitlement</span></p>
+        <div class="code">
+          <div class="code-head"><span class="dot" style="background: var(--acc);" aria-hidden="true"></span><span class="dot" style="background: #3A3A3A;" aria-hidden="true"></span>Paywall.kt</div>
+          <div class="code-body">
+<pre><span class="com">// Configure against your own backend</span>
+val kuota = KuotaKit.configure(
+  baseUrl = <span class="str">"https://api.yourapp.com"</span>,
+  publicKey = <span class="str">"pk_live_…"</span>
+)
+
+<span class="com">// Gate your premium features</span>
+val access = kuota.entitlements.check(<span class="str">"pro"</span>)
+if (access.isActive) unlockPro()</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY / FEATURES -->
+  <section class="wrap section">
+    <div class="eyebrow">// Why KuotaKit</div>
+    <h2>Your billing stack, on your terms</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="idx">01</span>
+        <h3>Self-hosted &amp; open source</h3>
+        <p class="muted">Apache-2.0. Clone it, read it, run it on your own infrastructure. No black boxes in the critical path.</p>
+      </div>
+      <div class="card">
+        <span class="idx">02</span>
+        <h3>No commission on your sales</h3>
+        <p class="muted">Purchases are validated against your own backend. KuotaKit never sits between you and your customers.</p>
+      </div>
+      <div class="card">
+        <span class="idx">03</span>
+        <h3>Kotlin-first, multiplatform</h3>
+        <p class="muted">One KMP core powers the Android, iOS, React Native and Flutter SDKs. Consistent behaviour everywhere.</p>
+      </div>
+      <div class="card">
+        <span class="idx">04</span>
+        <h3>Batteries-included backend</h3>
+        <p class="muted">A reference server in Ktor + Postgres you can deploy as-is or fork. Receipts, webhooks and entitlements.</p>
+      </div>
+      <div class="card">
+        <span class="idx">05</span>
+        <h3>You own the data</h3>
+        <p class="muted">Subscriptions, receipts and customers live in your database. Full export, no lock-in, no third party.</p>
+      </div>
+      <div class="card">
+        <span class="idx">06</span>
+        <h3>Built in the open</h3>
+        <p class="muted">Developed with a transparent, AI-assisted workflow. Follow the commits, open issues, send pull requests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="wrap section">
+    <div class="eyebrow">// How it works</div>
+    <h2>Self-hosted, end to end</h2>
+    <div class="flow">
+      <div class="card">
+        <span class="idx">01</span>
+        <h3>Your app + KuotaKit SDK</h3>
+        <p class="muted">Starts purchases, restores them and checks entitlements — natively on each platform.</p>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="card">
+        <span class="idx">02</span>
+        <h3>Your backend · Ktor + Postgres</h3>
+        <p class="muted">Verifies receipts with the stores and stores every subscription in your own database.</p>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="card">
+        <span class="idx">03</span>
+        <h3>Store webhooks</h3>
+        <p class="muted">Google Play &amp; the App Store notify your backend of renewals, upgrades and cancellations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta-inner">
+      <h2>Own your subscriptions.</h2>
+      <p>Open source, self-hosted, commission-free.</p>
+      <div class="cta-actions">
+        <a href="https://github.com/pedrorau/kuotakit" class="btn btn-primary">Star on GitHub</a>
+        <a href="docs/index.html" class="btn btn-ghost" style="background: var(--paper);">Read the docs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot-top">
+      <div class="foot-brand">
+        <div class="brand"><span class="sq" aria-hidden="true"></span> KuotaKit</div>
+        <p class="muted" style="margin-top: 14px; line-height: 1.55; font-size: 14px;">Subscriptions without commission. A self-hosted IAP &amp; subscriptions SDK.</p>
+        <p style="margin-top: 14px;"><span class="badge">Apache-2.0</span></p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>PRODUCT</h4>
+          <div>
+            <a href="docs/index.html">Docs</a>
+            <a href="https://github.com/pedrorau/kuotakit">GitHub</a>
+            <a href="https://github.com/pedrorau/kuotakit/releases">Changelog</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>PLATFORMS</h4>
+          <div>
+            <span class="muted">Android</span><span class="muted">iOS</span><span class="muted">React Native</span><span class="muted">Flutter</span>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>PACKAGES</h4>
+          <div>
+            <span class="muted">Maven Central</span><span class="muted">npm</span><span class="muted">pub.dev</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="wrap foot-bottom-inner">
+        <span>Built &amp; maintained by <a href="https://pedrorau.dev">Pedro Rau</a> · Founder &amp; Maintainer</span>
+        <span class="muted">© 2026 · Apache-2.0</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
