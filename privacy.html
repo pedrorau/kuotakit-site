@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy policy — KuotaKit Sandbox</title>
+  <meta name="description" content="Privacy policy of KuotaKit Sandbox, the open-source example app of KuotaKit. Política de privacidad." />
+  <link rel="canonical" href="https://kuotakit.pedrorau.dev/privacy.html" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230A0A0A'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .policy { max-width: 72ch; padding-block: 64px; display: flex; flex-direction: column; gap: 14px; }
+    .policy h1 { font-size: 40px; line-height: 1.08; }
+    .policy h2 { font-size: 22px; margin-top: 26px; }
+    .policy p, .policy li { line-height: 1.65; margin: 0; }
+    .policy ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
+    .policy hr { border: 0; border-top: 2px solid var(--ink); margin: 40px 0 10px; width: 100%; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand"><span class="sq" aria-hidden="true"></span> KuotaKit</a>
+      <div class="nav-links">
+        <a href="index.html" style="padding: 0 10px; font-weight: 500;">Home</a>
+        <a href="https://github.com/pedrorau/kuotakit" class="btn btn-ghost">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap policy" id="top">
+    <div class="eyebrow">// Privacy · <a href="#es">Español</a></div>
+    <h1>Privacy policy of KuotaKit Sandbox</h1>
+    <p class="muted">Last updated: November 11, 2026</p>
+
+    <p>KuotaKit Sandbox (package <code>dev.pedrorau.kuotakit.sandbox</code>) is the example Android app of <a href="https://github.com/pedrorau/kuotakit">KuotaKit</a>, an open-source project for in-app purchases and subscriptions. It is developed by Pedro Rau. It exists to try the project with <strong>test purchases only</strong>. This policy covers the app and the sandbox backend that the developer runs for it.</p>
+
+    <h2>Summary</h2>
+    <p>The app asks for no account and no personal information. To check a purchase it sends a random identifier and the purchase data to the sandbox backend. It has no ads, no analytics and no crash reporting.</p>
+
+    <h2>What the app and the sandbox backend collect</h2>
+    <ul>
+      <li><strong>An anonymous app identifier.</strong> A random value the app generates the first time it runs. It is stored in the app's private storage on your device and is not linked to your name, email, Google account or any other account. It is sent to the sandbox backend with every request so that purchases can be matched to the same app installation. Uninstalling the app removes it from your device.</li>
+      <li><strong>Purchase data.</strong> The product identifier and the purchase token of a purchase made through Google Play, sent with the identifier above. The backend uses them to ask Google Play whether the purchase is valid and answers the app with what access it gives. Your payment details (card, payment method) are handled only by Google Play: the app and the backend never see them.</li>
+      <li><strong>Your IP address.</strong> Like any internet service, the backend receives the IP address of each request. It is used only to limit how many requests one address can make.</li>
+    </ul>
+    <p>The app does <strong>not</strong> collect your name, email, location, contacts, photos, files, the advertising ID or any device identifier, and it does not use the microphone or the camera.</p>
+
+    <h2>Purpose and sharing</h2>
+    <p>The data is used only to make the app work: to check purchases and show what the user may access. It is not used for advertising, analytics or profiling, and it is not sold or shared with third parties. The only party the backend talks to about a purchase is Google Play, to verify it; Google's own privacy policy applies to that. The app contains no advertising, analytics or crash-reporting libraries.</p>
+
+    <h2>Security</h2>
+    <p>The app talks to the backend only over encrypted connections (HTTPS) in the version published on Google Play.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>The sandbox is a test environment. The data it holds is deleted automatically within 90 days of being collected. To ask for earlier deletion, write to the contact address below and send the identifier of your installation if you can read it; if you cannot, the data will be deleted anyway within that period. Uninstalling the app removes the identifier from your device.</p>
+
+    <h2>Other backends</h2>
+    <p>The app lets anyone type the address of a different backend in its Settings screen. This policy covers only the sandbox backend run by the developer: whoever operates another backend is responsible for what it does with the data.</p>
+
+    <h2>Children</h2>
+    <p>The app is not intended for children and is offered to users aged 18 and over.</p>
+
+    <h2>Changes</h2>
+    <p>If a future version changes how data is used, this page and its date will be updated before that version is published.</p>
+
+    <h2>Contact</h2>
+    <p>Pedro Rau — <a href="mailto:pedroraudelacruz@gmail.com">pedroraudelacruz@gmail.com</a></p>
+
+    <hr id="es" />
+    <div class="eyebrow">// Privacidad · <a href="#top">English</a></div>
+    <h1 lang="es">Política de privacidad de KuotaKit Sandbox</h1>
+    <p class="muted" lang="es">Última actualización: 11 de noviembre de 2026</p>
+
+    <p lang="es">KuotaKit Sandbox (paquete <code>dev.pedrorau.kuotakit.sandbox</code>) es la app de ejemplo para Android de <a href="https://github.com/pedrorau/kuotakit">KuotaKit</a>, un proyecto de código abierto para compras y suscripciones dentro de apps. La desarrolla Pedro Rau. Sirve para probar el proyecto solo con <strong>compras de prueba</strong>. Esta política cubre la app y el backend de pruebas (sandbox) que el desarrollador opera para ella.</p>
+
+    <h2 lang="es">Resumen</h2>
+    <p lang="es">La app no pide cuenta ni datos personales. Para comprobar una compra envía un identificador aleatorio y los datos de la compra al backend del sandbox. No tiene anuncios, analítica ni informes de fallos.</p>
+
+    <h2 lang="es">Qué recogen la app y el backend del sandbox</h2>
+    <ul lang="es">
+      <li><strong>Un identificador anónimo de la app.</strong> Un valor aleatorio que la app genera la primera vez que se ejecuta. Se guarda en el almacenamiento privado de la app en tu dispositivo y no está vinculado a tu nombre, correo, cuenta de Google ni a ninguna otra cuenta. Se envía al backend del sandbox en cada petición para asociar las compras a la misma instalación. Al desinstalar la app se elimina de tu dispositivo.</li>
+      <li><strong>Datos de la compra.</strong> El identificador del producto y el token de compra de una compra hecha con Google Play, junto con el identificador anterior. El backend los usa para preguntar a Google Play si la compra es válida y responde a la app con el acceso que da. Tus datos de pago (tarjeta, medio de pago) los gestiona solo Google Play: la app y el backend nunca los ven.</li>
+      <li><strong>Tu dirección IP.</strong> Como cualquier servicio de internet, el backend recibe la dirección IP de cada petición. Se usa solo para limitar cuántas peticiones puede hacer una misma dirección.</li>
+    </ul>
+    <p lang="es">La app <strong>no</strong> recoge tu nombre, correo, ubicación, contactos, fotos, archivos, el ID de publicidad ni ningún identificador del dispositivo, y no usa el micrófono ni la cámara.</p>
+
+    <h2 lang="es">Finalidad y comparticiones</h2>
+    <p lang="es">Los datos se usan solo para que la app funcione: comprobar compras y mostrar a qué puede acceder el usuario. No se usan para publicidad, analítica ni perfiles, y no se venden ni se comparten con terceros. La única parte con la que el backend habla sobre una compra es Google Play, para verificarla; a eso se aplica la política de privacidad de Google. La app no contiene bibliotecas de publicidad, analítica ni informes de fallos.</p>
+
+    <h2 lang="es">Seguridad</h2>
+    <p lang="es">La app se comunica con el backend solo mediante conexiones cifradas (HTTPS) en la versión publicada en Google Play.</p>
+
+    <h2 lang="es">Conservación y eliminación</h2>
+    <p lang="es">El sandbox es un entorno de pruebas. Los datos que contiene se eliminan automáticamente en un plazo de 90 días desde que se recogen. Para pedir una eliminación anterior, escribe al contacto indicado abajo y envía el identificador de tu instalación si puedes leerlo; si no puedes, los datos se eliminarán igualmente dentro de ese plazo. Al desinstalar la app se elimina el identificador de tu dispositivo.</p>
+
+    <h2 lang="es">Otros backends</h2>
+    <p lang="es">La app permite escribir en Ajustes la dirección de un backend distinto. Esta política cubre solo el backend del sandbox que opera el desarrollador: quien opere otro backend es responsable de lo que haga con los datos.</p>
+
+    <h2 lang="es">Menores</h2>
+    <p lang="es">La app no está dirigida a menores y se ofrece a usuarios de 18 años o más.</p>
+
+    <h2 lang="es">Cambios</h2>
+    <p lang="es">Si una versión futura cambia la forma en que se usan los datos, se actualizará esta página y su fecha antes de publicar esa versión.</p>
+
+    <h2 lang="es">Contacto</h2>
+    <p lang="es">Pedro Rau — <a href="mailto:pedroraudelacruz@gmail.com">pedroraudelacruz@gmail.com</a></p>
+  </main>
+
+  <footer>
+    <div class="foot-bottom">
+      <div class="wrap foot-bottom-inner">
+        <span>Built &amp; maintained by <a href="https://pedrorau.dev">Pedro Rau</a> · Founder &amp; Maintainer</span>
+        <span class="muted">© 2026 · Apache-2.0</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
